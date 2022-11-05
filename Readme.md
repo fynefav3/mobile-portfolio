@@ -2,7 +2,7 @@
 
 #### About the app
 
-This project is an cross platform app for of my portfolio. It contains information about me, my skillset, inks to my social media platform and a link to download my Resume.
+This project is a cross platform app of my portfolio. It contains information about me, my skillset, links to my social media platform and a link to download my Resume.
 This portfolio is a one pager app with mulitple sessions held together by a pageview.
 Images are fetched from cloudinary and other online session
 
@@ -23,6 +23,11 @@ npx react-native run-android
 #### Installing page viewer
 
 npm i react-native-pager-view
+### pod install 
+To install ios dependencies.
+
+### npm install
+To install all dependencies
 
 #### Design
 
