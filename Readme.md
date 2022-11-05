@@ -13,7 +13,6 @@ Before building a react native application a knowledge of javascript is required
 The instructions are a bit different depending on your development operating system, and whether you want to start developing for iOS or Android. If you want to develop for both Android and iOS, that's fine - you can pick one to start with, since the setup is a bit different.
 
 #### Getting started
-
 npx react-native init Resume
 
 cd Resume
@@ -44,4 +43,4 @@ The purpose of the chatbox will be to instantly communicate with me. You would b
 
 #### App
 
-[View on Appetize]()
+[View on Appetize](https://appetize.io/app/rksuwvbdrytm26yyijhe6hub7y)
