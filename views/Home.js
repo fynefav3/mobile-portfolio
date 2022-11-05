@@ -1,8 +1,18 @@
-import {StyleSheet, Text, useColorScheme, View, Image} from 'react-native';
-import React from 'react';
+import {
+  StyleSheet,
+  Dimensions,
+  Text,
+  useColorScheme,
+  View,
+  Image,
+} from 'react-native';
+import React, {useState, useEffect} from 'react';
 
 const Home = () => {
   const isDarkMode = useColorScheme() === 'dark';
+
+  const dim = Dimensions.get('screen');
+  const [ip, setIsPortrait] = useState(dim.height >= dim.width);
 
   const h1 = {
     color: isDarkMode ? '#ffffff' : '#000000',
@@ -12,11 +22,23 @@ const Home = () => {
 
   const h4 = {color: isDarkMode ? '#ffffff' : '#000000', fontSize: 22};
 
+  const parent = {
+    flexDirection: ip ? 'column' : 'row',
+    display: 'flex',
+    flex: 1,
+  };
+
+  useEffect(() => {
+    Dimensions.addEventListener('change', () => {
+      setIsPortrait(dim.height >= dim.width);
+    });
+  });
+
   return (
-    <View style={styles.parent}>
+    <View style={parent}>
       <View style={styles.child1}>
         <Text style={h1}>Hello{'\n'}I'm Ihuoma</Text>
-        <Text style={h4}>I build great mobile apps</Text>
+        <Text style={h4}>I build mobile apps</Text>
       </View>
       <View style={styles.child2}>
         <Image
@@ -33,11 +55,6 @@ const Home = () => {
 export default Home;
 
 const styles = StyleSheet.create({
-  parent: {
-    flexDirection: 'column',
-    display: 'flex',
-    flex: 1,
-  },
   child1: {
     display: 'flex',
     flexDirection: 'column',

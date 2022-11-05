@@ -25,7 +25,7 @@ const App: () => Node = () => {
   };
 
   return (
-    <PagerView style={styles.pagerView} initialPage={1} orientation="vertical">
+    <PagerView style={styles.pagerView} initialPage={0} orientation="vertical">
       <View key="1" style={backgroundStyle}>
         <Home />
       </View>
